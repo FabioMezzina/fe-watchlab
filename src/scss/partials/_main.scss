@@ -1,0 +1,262 @@
+// history section
+
+// intro section
+.intro .history-text p{
+  flex-basis: 50%;
+  color: $text-color;
+  &:first-of-type {
+    padding-right: 150px;
+  }
+}
+
+// show section
+.show-row {
+  &:nth-of-type(2n + 1) {
+    flex-direction: row-reverse;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 100px;
+    max-width: 50%;
+    text-align: center;
+    p {
+      color: $text-color;
+    }
+    .button:hover {
+      border-color: rgba($text-color, .6);
+      color: $text-color;
+      background-color: rgba($brand-color, .3);
+    }
+  }
+  .show-image {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// press section
+.press {
+  height: 720px;
+  min-height: 720px;
+  .container {
+    height: 100%;
+  }
+}
+.press-text {
+  width: 50%;
+  p {
+    padding-right: 40%;
+    color: $text-color;
+  }
+} 
+
+.press-show {
+  position: relative;
+  padding-top: 220px;
+  width: 50%;
+  height: 100%;
+  background-color: $show-bg;
+  .content {
+    padding-left: 50%;
+    p {
+      margin-bottom: 0;
+      font-family: sans-serif;
+      font-weight: 600;
+      &.date {
+        font-family: sans-serif;
+        color: $brand-color;
+      }
+    }
+    h3 {
+      font-size: 2.7rem;
+    }
+  }
+  .wrapper {
+    position: absolute;
+    width: 60%;
+    display: block;
+    top: 220px;
+    right: 60%;
+  }
+  .cta {
+    color: $text-color;
+    &.cta-left {
+      margin-right: 40px;
+    }
+  }
+}
+
+// discover section
+.discover {
+  height: 900px;
+  min-height: 900px;
+  .container {
+    height: 100%;
+    h2 {
+      font-size: 5.4rem;
+    }
+    .img-big {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 50%;
+      color: $white;
+      text-align: center;
+      background-image: url("../../images/discover-big.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      h2 {
+        z-index: 1;
+      }
+      h4 {
+        font-family: sans-serif;
+        letter-spacing: 2px;
+        z-index: 1;
+      }
+      &:after {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($black, .4);
+        top: 0;
+        left: 0;
+        content: '';
+      }
+    }
+    .images-small {
+      flex-wrap: wrap;
+      width: 50%;
+      height: 100%;
+      .img-small {
+        width: 50%;
+        height: 50%;
+        &:nth-child(1) {
+          background-image: url("../../images/discover-bus.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &:nth-child(2) {
+          background-image: url("../../images/discover-flowers.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &:nth-child(3) {
+          background-image: url("../../images/discover-purple.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &:nth-child(4) {
+          background-image: url("../../images/discover-wine.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  // history section
+  .intro .history-text {
+    flex-wrap: wrap;
+    p {
+      flex-basis: 100%;
+      &:first-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+
+  // show section
+  .show-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &:nth-of-type(2n + 1) {
+      flex-direction: row;
+    }
+    .title {
+      padding: 50px 0;
+      max-width: 100%;
+    }
+  }
+
+  // press section
+.press {
+  .container {
+    flex-wrap: wrap;
+  }
+}
+.press-text {
+  width: 100%;
+  text-align: center;
+  p {
+    padding-right: 0;
+  }
+} 
+
+.press-show {
+  position: relative;
+  padding: 25px;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  // background-color: $show-bg;
+  background-image: url("../../images/crafting.png");
+  background-size: cover;
+  &:after {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($white, .5);
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 0;
+  }
+  .content {
+    position: relative;
+    padding-left: 0;
+    z-index: 2;
+    p {
+      margin-bottom: 0;
+      font-weight: 600;
+      &.date {
+        color: $brand-color;
+      }
+    }
+    h3 {
+      font-size: 2.7rem;
+    }
+  }
+  .wrapper {
+    display: none;
+  }
+  .cta {
+    color: $black;
+  }
+}
+
+  // discover section
+  .discover {
+    height: 900px;
+    min-height: 900px;
+    .container {
+      flex-wrap: wrap;
+      .img-big {
+        min-width: 100%;
+      }
+      .images-small {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

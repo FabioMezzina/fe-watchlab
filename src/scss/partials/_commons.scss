@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: serif;
+}
+
+body {
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1750px;
+}
+
+.button {
+  padding: 15px 100px;
+  color: $brand-color;
+  font-family: 'Merryweather';
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid $brand-color;
+  background-color: transparent;
+  transition: .2s;
+  &:hover {
+    border-color: rgba($white, .6);
+    color: $white;
+    background-color: rgba($brand-color, .3);
+  }
+}
+
+// img responsive
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// typography
+h1 {
+  font-size: 5.4rem;
+  font-family: 'Merriweather';
+}
+
+h2 {
+  font-family: 'Merryweather';
+  font-size: 5.4rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  &.london {
+    font-family: sans-serif;
+    letter-spacing: 1.4px;
+  }
+}
+
+p {
+  font-size: 1.4rem;
+  letter-spacing: 2.5px;
+  line-height: 2;
+}
+
+a {
+  color: $brand-color;
+  &:hover {
+    color: $brand-color;
+    text-decoration: none;
+  }
+}
+
+span {
+  display: block;
+  font-size: 1rem;
+  font-family: sans-serif;
+  letter-spacing: 1.2px;
+}
+
+@media screen and (max-width: 992px) {
+  * {
+    font-size: 12px;
+  }
+}
