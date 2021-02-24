@@ -10235,6 +10235,7 @@ header {
   background-image: url(../../images/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .hero:after {
   position: absolute;
@@ -10671,10 +10672,6 @@ header {
   width: 20%;
 }
 
-.copyright span {
-  font-family: "Merryweather";
-}
-
 @-webkit-keyframes underline-footer {
   0% {
     left: -30px;
@@ -10707,6 +10704,7 @@ header {
 }
 .copyright .wrapper span {
   margin: 0;
+  font-family: "Merryweather";
   color: #d0c5b6;
 }
 .copyright .wrapper span a:hover {

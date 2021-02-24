@@ -98,11 +98,6 @@
   }
 }
 
-// copyright section
-.copyright span{
-  font-family: 'Merryweather';
-}
-
 @keyframes underline-footer {
   0% {
     left: -30px;
@@ -124,6 +119,7 @@
   background-color: $copyright-bg;
   span {
     margin: 0;
+    font-family: 'Merryweather';
     color: $brand-color;
     a:hover {
       transition: .1s;
